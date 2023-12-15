@@ -1,0 +1,8 @@
+a = read.csv("Heart Failure Clinical Records.csv")
+View(a)
+model_1 = lm(high_blood_pressure ~ ., data = a)
+summary(model_1)
+mdl_1 = lm(a$creatinine_phosphokinase ~ a$platelets, data = a)
+summary(mdl_1)
+plot(model_1)
+plot(mdl_1)
